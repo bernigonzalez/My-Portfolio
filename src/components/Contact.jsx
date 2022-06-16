@@ -2,9 +2,26 @@ import React from 'react'
 import {FaLinkedinIn, FaGithub} from 'react-icons/fa'
 import {AiOutlineMail} from 'react-icons/ai'
 import {HiOutlineChevronDoubleUp} from 'react-icons/hi'
+import Swal from "sweetalert2";
 
 
 function Contact() {
+
+    const handleSendMessage = (e) => {
+        e.preventDefault()
+        
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Your message has been sent!",
+          showConfirmButton: true,
+          timer: 3000,
+        }).then(function() {
+          window.location = "/"  
+        });
+    
+      }
+
   return (
     <div id='contact' className='w-full lg:h-screen'>
         <div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
@@ -71,13 +88,13 @@ function Contact() {
                                     <label className='Uppercase text-sm py-2'>Message</label>
                                     <textarea className='border-2 rounded-lg p-3 border-indigo-700' rows="10" type="text" />
                             </div>
-                            <button className='w-full p-4 text-gray-100 mt-4 '>Send Message</button>
+                            <button onClick={handleSendMessage} className='w-full p-4 text-gray-100 mt-4 '>Send Message</button>
                         </form>
                     </div>
                 </div>    
             </div>
             <div className='flex justify-center py-12'>
-                <a href='/'>
+                <a href='/#main'>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                         <HiOutlineChevronDoubleUp className='text-indigo-700' size={30}/>
                     </div>  

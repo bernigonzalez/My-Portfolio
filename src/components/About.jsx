@@ -19,7 +19,7 @@ function About() {
                     <p className='py-2 text-gray-600'>
                     🧐I'm looking for my very first formal job as a developer. 
                     </p>
-                    <p className='py-2 text-gray-600 underline cursor-pointer'>Check out my latest projects.</p>
+                    <p className='py-2 text-gray-600 underline cursor-pointer'><a href='/#projects'>Check out my latest projects.</a></p>
             </div>
             <div className='w-full m-auto h-auto shadow-xl border-2 border-indigo-700 shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
                 <img className='rounded-xl' src={bernardoImg} alt="my profile pic" />
